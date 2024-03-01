@@ -1,0 +1,365 @@
+:root {
+  --primary-light: #2196f3;
+  --primary: #60fc5d;
+  --primary-dark: #459533;
+  --white: #fff;
+  --greyLight-1: #e4ebf5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  padding: 1em;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.entring {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  gap: 20px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#canvas {
+  width: 100%;
+  cursor: zoom-in;
+  height: 90vh;
+}
+
+nav {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  transition: 1s;
+
+}
+
+#listNav {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+li {
+  margin-top: 10px;
+  display: block;
+}
+
+#listNav button,
+button {
+  width: 130px;
+  height: 2rem;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: #f3f7f4;
+  border: none;
+  font-size: 16px;
+  color: black;
+}
+
+button {
+  width: auto;
+  color: white;
+  border-radius: 0px;
+  background:transparent;
+  border: solid 1px white;
+  width: 60px;
+  height: 60px;
+}
+
+button:hover {
+  border: solid 1px black;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+
+
+#listNav button:hover {
+  color: var(--primary);
+}
+
+
+
+.btn p {
+  font-size: 1.6rem;
+}
+
+#affine div,
+#proectional div {
+  margin: 5px;
+}
+
+#linear:only-child {
+  margin-top: 20px;
+}
+
+#move,
+#rotate,
+#gridParametrs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#affine,
+#proectional {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#linear p,
+#affine p,
+#proectional p {
+  font-weight: 700;
+}
+
+label {
+  margin-right: 10px;
+}
+
+.inputWithLabel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 38%;
+  gap: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+input {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  font-size: 1.4rem;
+  padding-left: 1.4rem;
+  background: white;
+  border: solid 1px black;
+  font-family: inherit;
+  color: var(--greyDark);
+  border-radius: 0px;
+  border-radius: 5px;
+}
+
+button {
+  border-radius: 20px;
+}
+
+input::placeholder {
+  color: var(--greyLight-3);
+}
+
+
+textarea {
+  width: 400px;
+  height: 120px;
+}
+
+[type=file] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+  display: none;
+}
+
+[type=file]+label {
+  background: #f15d22;
+  border: none;
+  border-radius: 0px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: 500;
+  outline: none;
+  padding: 5px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+
+[type=file]+label:hover {
+  background-color: #d3460d;
+}
+
+
+[type=file]+label.btn-2 {
+  background-color: transparent;
+  border-radius: 20px;
+  border: solid 1px white;
+  overflow: hidden;
+}
+
+[type=file]+label.btn-2::before {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 100%;
+  height: 100%;
+  right: 130%;
+  line-height: 3.3;
+  position: absolute;
+  top: 0px;
+  transition: all 0.3s;
+}
+
+[type=file]+label.btn-2:hover {
+  border: solid 1px black;
+}
+
+[type=file]+label.btn-2:hover::before {
+  right: 75%;
+}
+
+
+.files {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.files button {
+  height: 45px;
+}
+
+.results {
+  gap: 20px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#findYbyX {
+  width: 10rem;
+}
+
+.result {
+  width: 100%;
+  text-align: center;
+}
+
+.showGraph {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.showGraph button {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.last-req input {
+  width: 55%;
+}
+
+.last-req {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;;
+  align-items: center;
+  gap: 15px 0;
+}
+
+table input {
+  width: 6em;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 0 10px;
+}
+
+.coefficientss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.resWrapp {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  justify-content: center;
+}
+
+.showWrapp {
+  display: flex;
+  gap: 20px;
+
+}
+
+.show_hide {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}

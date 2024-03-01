@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/icon.png">
+
+    <title>ЛР-1</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+
+    <div class="wrap">
+        <nav id="nav">
+            <div class="entring">
+                <h1>Метод найменших квадратів (МНК)</h1>
+                <div style="display: flex; align-items: center; width: 90%; justify-content: space-evenly;">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                        <p>Кількість точок</p>
+                        <input type="number" placeholder="к-ть інтервалів" id="intervalsNum" value="0"
+                            style="width: 10rem;">
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                        <input type="text" placeholder="name" id="functionName" style="width: 10rem;">
+                        <p>Функція</p>
+                    </div>
+                </div>
+                <div id="linear">
+                    <table id="intervals">
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="buttons">
+                    <button class="clear"><img src="media/clear.png" width="48px" height="48px"></button>
+                    <button id="calculate"><img src="media/calculate.png" width="48px" height="48px"></button>
+                    <button id="saveToFile"><img src="media/download.png" width="48px" height="48px"></button>
+                    <div>
+                        <input type="file" id="file" class="fileInput" style="padding-left: 0;">
+                        <label for="file" class="btn-2"><img src="media/upload.png" width="48px" height="48px"></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results">
+                <div class="resWrapp">
+                    <div class="coefficientss">
+                        <h2>Результати обчислень</h2>
+                        <input type="number" placeholder="x" id="findYbyX">
+                        <div class="result">
+                            <p>ЛІНІЙНА РЕГРЕССІЯ</p>
+                            <span id="lineReg">[ k = ? ; b = ? ]</span><br>
+                            <span id="lineRegRes">[ ? ; ? ]</span>
+                        </div>
+                        <div class="result">
+                            <p>КВАДРАТИЧНА РЕГРЕССІЯ</p>
+                            <span id="qadReg">[ a = ? ; b = ?; c = ? ]</span><br>
+                            <span id="qadRegRes">[ ? ; ? ]</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="showGraph">
+                    <h3>Відобразити/Сховати графік</h3>
+                    <div class="showWrapp">
+                        <div class="show_hide">
+                            <p>Задані точки</p>
+                            <button id="showTest" name="test" class="onScreen"><img src="media/hide.png"
+                                    width="38px"></button>
+                        </div>
+                        <div class="show_hide">
+                            <p>Лінія</p>
+                            <button id="showLine" name="line" class="onScreen"><img src="media/hide.png"
+                                    width="38px"></button>
+                        </div>
+                        <div class="show_hide">
+                            <p>Парабола</p>
+                            <button id="showParab" name="quadratic" class="onScreen"><img src="media/hide.png"
+                                    width="38px"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="canvas"></div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.js"></script>
+    <script src="scripts/resFunc.js"></script>
+    <script src="scripts/triggers.js"></script>
+    <script src="scripts/configuration.js"></script>
+
+</body>
+
+</html>
